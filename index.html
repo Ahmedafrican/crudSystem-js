@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud System</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="crud my-5">
+        <div class="container">
+            <div class="shadow p-3 mb-5 rounded">
+                <h1 class="text-center">
+                    Crud System
+                </h1>
+                <label>ProductName:</label>
+                <input type="text" class="form-control my-1" id="productName">
+                <label>ProductCategory:</label>
+                <input type="text" class="form-control my-1" id="productCategory">
+                <label>ProductPrice:</label>
+                <input type="text" class="form-control my-1" id="productPrice">
+                <label>ProductDescription:</label>
+                <textarea class="form-control my-1" id="productDescription"></textarea>
+                <button type="button" class="btn btn-primary py-2 my-2" onclick="addProduct()" id="btnAdd">Add Product</button>
+                <button type="button" class="btn btn-danger py-2 my-2" onclick="resetProduct()">Reset</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <input type="text" class="form-control my-5 w-75 mx-auto" placeholder="search" id="searchProduct" oninput="search(this.value)">
+        <table class="table text-center mx-auto">
+                <thead>
+                    <th scope="col">index</th>
+                    <th scope="col">name</th>
+                    <th scope="col">category</th>
+                    <th scope="col">price</th>
+                    <th scope="col">description</th>
+                    <th scope="col">update</th>
+                    <th scope="col">delete</th>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+        </table>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
